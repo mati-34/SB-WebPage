@@ -1,0 +1,56 @@
+---
+import Search from "../../public/icons/Search.astro";
+import ShoppingCart from "../../public/icons/ShoppingCart.astro";
+---
+
+<header class="fixed bg-[#D2979A] w-full h-[90px] grid">
+    <div class=" size-[80px] m-auto ml-3 col-span-2">
+        <img src="/logo.png" alt="">
+    </div>
+
+    <nav class="col-span-6">
+        <ul class="flex justify-center items-center h-full gap-4">
+            <li class=" text-xl"><a href="/">Productos</a></li>
+            <li class=" text-xl"><a href="/">Quienes somos</a></li>
+            <li class=" text-xl"><a href="/">Inicio</a></li>
+        </ul>
+    </nav>
+
+    <h1 class="col-span-6 text-5xl font-bold m-auto">SB Sieños</h1>
+
+    <form action="" class="col-span-5 flex w-4/5 justify-center items-center bg-white h-[36px] m-auto gap-2 rounded-3xl p-2">
+        <input placeholder="Buscar..." class="w-full h-[30px] bg-transparent focus-visible:outline-none">
+        <button type="submit" id="search-icon" class="size-[24px]">
+            <Search />
+        </button>
+    </form>
+
+    <div class="flex justify-center items-center gap-2 mr-3 col-span-3 text-lg">
+        <a href="/" id="shopping-cart" class="size-[28px]">
+            <ShoppingCart />
+        </a>
+        <div id="total-items" class=" cursor-default">0 items</div>
+        <span>-</span>
+        <div id="total-price" class=" cursor-default">$0,00</div>
+    </div>
+</header>
+
+<style>
+    header{
+        grid-template-columns: repeat(22, minmax(0, 1fr));
+    }
+
+    li::after{
+        content: '';
+        display: block;
+        margin: auto;
+        height: 3px;
+        width: 0px;
+        background-color: #000;
+        transition: all .5s ease;
+    }
+
+    li:hover::after{
+        width: 100%;
+    }
+</style>

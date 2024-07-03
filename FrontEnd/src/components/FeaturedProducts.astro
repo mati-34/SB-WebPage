@@ -1,0 +1,21 @@
+---
+import { faker } from '@faker-js/faker'
+
+
+const img = faker.image.url()
+---
+
+<main class="flex justify-center items-center flex-col">
+    <h2 class="text-5xl font-bold mt-3"> Productos Destacados </h2>
+    <div class="grid grid-cols-3 gap-10 m-5">
+        <a href="/">
+            <img src={img} alt="Producto 1" class="w-[410px] aspect-[3/4]">
+        </a>
+        <a href="/">
+            <img src={img} alt="Producto 1" class="w-[410px] aspect-[3/4]">
+        </a>
+        <a href="/">
+            <img src={img} alt="Producto 1" class="w-[410px] aspect-[3/4]">
+        </a>
+    </div>
+</main>

@@ -1,0 +1,66 @@
+---
+import Instagram from "../../../public/icons/Instagram.astro";
+import Mail from "../../../public/icons/Mail.astro";
+import WhatssApp from "../../../public/icons/WhatssApp.astro";
+
+
+---
+
+<main class="mt-[20vh] bg-[#D2979A] pt-8">
+    <h2 class="w-fit m-auto text-5xl font-bold">Contactanos</h2>
+    <div class="my-5">
+        <a href="/">
+            <p>WhatssApp</p>
+            <div class="size-[16px] stroke-[1.5]">
+                <WhatssApp />
+            </div>
+        </a>
+        <a href="/">
+            <p>Instagram</p>
+            <div class="size-[16px] stroke-[1.5]">
+                <Instagram />
+            </div>
+        </a>
+        <a href="/">
+            <p>E-Mail</p>
+            <div class="size-[16px] stroke-[1.5]">
+                <Mail />
+            </div>
+        </a>
+    </div>
+    <footer>
+        <p>© 2024 SB Diseños. Todos los derechos reservados.</p>
+    </footer>
+</main>
+
+
+<style>
+    a{
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+    }
+
+    a p{
+        font-size: 1rem;
+        margin-bottom: 4px;
+        margin-right: 4px;
+    }
+
+    a p::after{
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        background-color: #000;
+        transition: all 0.3s ease;
+    }
+
+    a p:hover::after{
+        width: 100%;
+        height: 1.5px;
+    }
+</style>

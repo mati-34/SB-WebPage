@@ -5,6 +5,8 @@ interface Props {
 
 const { title } = Astro.props;
 
+import ContactUs from '../components/ContactUs.astro';
+import Header from '../components/Header.astro';
 import '@fontsource/poppins';
 ---
 
@@ -18,12 +20,29 @@ import '@fontsource/poppins';
 		<title>{title}</title>
 	</head>
 	<body>
+		<Header />
 		<slot />
+		<ContactUs />
 	</body>
 </html>
 <style is:global>
 	body{
 		font-family: 'Poppins', sans-serif;
 		background-color: #E5C0C2;
+		overflow-y: scroll;
+		
+	}
+	body::-webkit-scrollbar {
+		width: 12px;
+	}
+
+	body::-webkit-scrollbar-track {
+		background: #f6eaeb;
+	}
+
+	body::-webkit-scrollbar-thumb {
+		background-color: #8d484c;
+		border-radius: 10px;
+		border: 2px solid #f6eaeb;
 	}
 </style>

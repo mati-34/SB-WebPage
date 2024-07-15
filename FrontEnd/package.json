@@ -10,6 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/node": "^8.3.2",
     "@astrojs/tailwind": "^5.1.0",
     "@fontsource/poppins": "^5.0.14",
     "@fontsource/twinkle-star": "^5.0.20",

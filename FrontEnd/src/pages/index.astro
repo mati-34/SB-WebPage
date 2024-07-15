@@ -1,19 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import HeroSection from '../components/HeroSection.astro';
-import FeaturedProducts from '../components/FeaturedProducts.astro';
-import OurProducts from '../components/OurProducts.astro';
-import ContactUs from '../components/ContactUs.astro';
+import HeroSection from '../components/index/HeroSection.astro';
+import FeaturedProducts from '../components/index/FeaturedProducts.astro';
+import OurProducts from '../components/index/OurProducts.astro';
 ---
 
 <Layout title="Welcome to Astro.">
-	<Header />
 	<HeroSection />
 	<FeaturedProducts />
 	<OurProducts />
-	<ContactUs />
 </Layout>
-
-<style>
-</style>

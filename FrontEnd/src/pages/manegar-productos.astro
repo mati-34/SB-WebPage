@@ -1,0 +1,52 @@
+---
+import { CreateProduct } from "../components/manegar-productos/create-product.jsx";
+import Header2 from "../components/manegar-productos/Header2.astro";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	</head>
+
+  <body>
+    <Header2 />
+    <section id="create-product">
+      <CreateProduct client:load />
+    </section>
+    <section id="edit-product">
+
+    </section>
+    <section id="delete-product">
+
+    </section>
+    <section id="products">
+
+    </section>
+  </body>
+</html>
+
+<style is:global>
+	body{
+		font-family: 'Poppins', sans-serif;
+		background-color: #E5C0C2;
+		overflow-y: scroll;
+		
+	}
+	body::-webkit-scrollbar {
+		width: 12px;
+	}
+
+	body::-webkit-scrollbar-track {
+		background: #f6eaeb;
+	}
+
+	body::-webkit-scrollbar-thumb {
+		background-color: #8d484c;
+		border-radius: 10px;
+		border: 2px solid #f6eaeb;
+	}
+</style>

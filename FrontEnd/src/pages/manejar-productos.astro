@@ -1,0 +1,63 @@
+---
+import "@fontsource/poppins";
+import { AddNewProduct } from "../components/manejar-productos/add-new-product.jsx";
+import { ProductList } from "../components/manejar-productos/product-list.jsx";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	</head>
+
+  <body>
+	<header class="w-full h-[100px] z-50 top-0 transition-all duration-500 ease-in p-3">	
+		<h1 class="text-5xl font-bold m-auto w-fit"><a href="/">SB Diseños</a></h1>
+	</header>
+	<section id="manage-products" class="w-full grid grid-cols-3 grid-rows-2">
+		<div id="add-new-product" class="w-full col-start-2 flex justify-center items-center">
+			<AddNewProduct client:load/>
+		</div>
+		<div id="products-list" class="w-full row-start-2 col-span-3 flex justify-center items-center">
+			<ProductList client:load/>
+		</div>
+	</section>
+
+  </body>
+</html>
+
+<style is:global>
+	body{
+		font-family: 'Poppins', sans-serif;
+		background-color: #D2979A;
+		overflow-y: scroll;
+		
+	}
+	body::-webkit-scrollbar {
+		width: 12px;
+	}
+
+	body::-webkit-scrollbar-track {
+		background: #f6eaeb;
+	}
+
+	body::-webkit-scrollbar-thumb {
+		background-color: #8d484c;
+		border-radius: 10px;
+		border: 2px solid #f6eaeb;
+	}
+
+	input{
+		border-radius: 6px;
+		padding: 2px 4px;
+		border: 1px solid #8d484c;
+		background-color: #f6eaeb;
+	}
+	input:focus{
+		outline: none;
+		border: 3px solid #9e6265;
+	}
+</style>
